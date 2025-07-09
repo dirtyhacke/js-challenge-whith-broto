@@ -43,6 +43,8 @@
     color: white;
     outline: none;
     border: none;
+    width: 150%;
+    max-width: 1200px;
  }
  p{
     color: #2a9d8f;
@@ -58,6 +60,8 @@
   border-radius: 50%;
   position: relative;
   background: #000;
+  margin:auto;
+  margin-top: -15%;
 }
 
 .hand {
