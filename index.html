@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body></body>
+    <div class="time-screen">
+        <h1>CLOCK</h1>
+        <input type="text" class="in" id="clock">
+        <input type="text" class="dt" id="date">
+        <p id="day">date</p>
+    </div>
+
+  <div class="clock">
+    <div class="hand hour" id="hour"></div>
+    <div class="hand minute" id="minute"></div>
+    <div class="hand second" id="second"></div>
+    <div class="center"></div>
+  </div>
+
+    <script>
+        function clockUpdate(){
+        let hour = new Date().getHours()%12||12;
+        let minute = new Date().getMinutes();
+        let second = new Date().getSeconds();
+
+            hour = hour < 10 ? "0" + hour : hour;
+            minute = minute < 10 ? "0" + minute : minute;
+            second = second < 10 ? "0" + second : second;
+
+        document.getElementById('clock').value=hour+" : "+minute+" : "+second;
+
+        const date_new = new Date();
+        let date = date_new.getDate();
+        let month = date_new.getMonth();
+        let year = date_new.getFullYear();
+        
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let day = days[date_new.getDay()];
+
+        document.getElementById('date').value=date+" - "+month+" - "+year;
+
+        document.getElementById('day').innerText=day.toUpperCase();
+
+        const secondDeg = second * 6;           
+        const minuteDeg = minute * 6 + second * 0.1; 
+        const hourDeg = (hour % 12) * 30 + minute * 0.5; 
+
+        document.getElementById('second').style.transform = `rotate(${secondDeg}deg)`;
+        document.getElementById('minute').style.transform = `rotate(${minuteDeg}deg)`;
+        document.getElementById('hour').style.transform = `rotate(${hourDeg}deg)`;
+
+        }
+        clockUpdate();
+
+        setInterval(clockUpdate,1000);
+    </script>
+</body>
+</html>

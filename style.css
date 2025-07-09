@@ -1,0 +1,147 @@
+ @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Anton&family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&family=Exile&family=Meie+Script&family=Outfit:wght@100..900&family=Prata&family=Rubik+Vinyl&family=Share+Tech&family=WDXL+Lubrifont+TC&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+ }
+ .time-screen{
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15%;
+ }
+ .time-screen .in{
+    width: 560%;
+    padding: 0px;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 700%;
+    font-family: "Bitcount Grid Double";
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 10%;
+ }
+ .time-screen h1{
+    padding-left: 25%;
+    margin-left:10%;
+    color: white;
+    font-size: 640%;
+    font-family: "WDXL Lubrifont TC";
+ }
+ .dt{
+    height: 200px;
+    margin-left: 10%;
+    padding: 80px;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 700%;
+    font-family: "Anton";
+    color: white;
+    outline: none;
+    border: none;
+ }
+ p{
+    color: #2a9d8f;
+    margin: auto;
+    font-size: 300%;
+ }
+
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  background: #000;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  background: white;
+  border-radius: 10px;
+}
+
+.hour {
+  width: 6px;
+  height: 70px;
+  background: #adb5bd;
+}
+
+.minute {
+  width: 4px;
+  height: 100px;
+  background: #1a759f;
+}
+
+.second {
+  width: 2px;
+  height: 120px;
+  background: #0ff;
+}
+
+.center {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #52b69a;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ @media(max-width:500px){
+ .time-screen{
+    margin: auto;
+    width: 50%;
+    margin-left:-5%;
+    margin-top: 50%;
+ }
+ .time-screen .in{
+    width: 420%;
+    padding: 0px;
+    font-size: 300%;
+    border: none;
+    margin-left: -10%;
+ }
+ .time-screen .dt{
+    width: 300%;
+    padding: 0px;
+    font-size: 300%;
+    border: none;
+    height: 10%;
+    margin-left: 60%;
+    
+ }
+ .time-screen p{
+    margin-left: 25%;
+ }
+ .time-screen h1{
+    font-size: 50px;
+    margin-left: 95%;
+ }
+ .clock{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border: solid #778da9;
+ }
+ .hour{
+    height: 80px;
+ }
+ .second{
+    height: 90px;
+ }
+ .minute{
+    height: 85px;
+ }
+ }
