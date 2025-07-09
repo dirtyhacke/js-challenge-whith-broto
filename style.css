@@ -107,14 +107,14 @@
     margin-top: 50%;
  }
  .time-screen .in{
-    width: 440%;
+    width: 470%;
     padding: 0px;
     font-size: 300%;
     border: none;
-    margin-left: -10%;
+    margin-left: -40%;
  }
  .time-screen .dt{
-    width: 300%;
+    width: 340%;
     padding: 0px;
     font-size: 300%;
     border: none;
@@ -123,7 +123,7 @@
     
  }
  .time-screen p{
-    margin-left: 15%;
+    margin-left: 0%;
  }
  .time-screen h1{
     font-size: 50px;
